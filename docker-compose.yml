@@ -1,7 +1,7 @@
 version: '3.8'
 
 networks:
-  riotranknet:
+  riotrank_network:
     ipam:
       driver: default
       config:
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     networks:
-      riotranknet:
+      riotrank_network:
         ipv4_address: 10.0.0.2
   db:
     image: postgres:15
@@ -31,7 +31,7 @@ services:
       - POSTGRES_PASSWORD=hello_django
       - POSTGRES_DB=hello_django_dev
     networks:
-      riotranknet:
+      riotrank_network:
         ipv4_address: 10.0.0.3
 volumes:
   postgres_data:
