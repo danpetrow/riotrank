@@ -23,3 +23,7 @@ urlpatterns = [
     path("", views.index),
     path('', include('api.urls'))
 ]
+
+urlpatterns += [
+    path('api-auth/', include('rest_framework.urls')),
+]
