@@ -2,10 +2,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RiotRank</title>
+        <title>StoneFruitSoftware</title>
         <link rel="stylesheet" href="{% static 'index.css' %}">
     </head>
-
+    <header>
+        {% block header %}
+        <div class="topnav">
+            <a class="split" href="/">StoneFruitSoftware</a>
+            <a href="/riotrank">RiotRank</a>
+          </div>
+        {% endblock %}
+    </header>
     <body>
     {% block content %}{% endblock content %}
     </body>

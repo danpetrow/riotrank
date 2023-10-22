@@ -21,7 +21,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.index),
-    path('', include('api.urls'))
+    path('riotrank/', views.riotrank),
+    path('riotrank/', include('api.urls'))
 ]
 
 urlpatterns += [

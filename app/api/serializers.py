@@ -14,4 +14,4 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         owner = serializers.ReadOnlyField(source='owner.username')
-        fields = ['id', 'team_name', 'owner']
+        fields = ['team_id', 'team_code', 'team_name', 'rank']
